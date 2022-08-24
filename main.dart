@@ -55,11 +55,6 @@ void main() {
   x += 2.5;
   print(x);
 
-  const msPerSecond = 1000;
-  const secondsUntilRetry = 5;
-  const msUntilRetry = secondsUntilRetry * msPerSecond;
-  print(msUntilRetry);
-
   //Strings
   var s1 = 'Single quotes work well for string literals.';
   print(s1);
@@ -67,7 +62,7 @@ void main() {
   var s2 = "Double quotes just work as well.";
   print(s2);
 
-  var s3 = 'It\'s easy to escape the string delimiter.';  //use escape characters
+  var s3 = 'It\'s easy to escape the string delimiter.'; //use escape characters
   print(s3);
 
   var s4 = "It's even easier to use the other delimiter.";
@@ -75,10 +70,12 @@ void main() {
 
 //  String interpolation
   var s = "String interpolation";
-  print("Dart has $s, which is very handy.");  //Recommended and avoid concatenation with + symbol
+  print(
+      "Dart has $s, which is very handy."); //Recommended and avoid concatenation with + symbol
 
   String firstName = 'Sana';
-  print("The number of characters in String firstName is " + firstName.length.toString()); //Not Recommended
+  print("The number of characters in String firstName is " +
+      firstName.length.toString()); //Not Recommended
 
   //Recommended as per Dart Coding Conventions
   print("The number of characters in String firstName is ${firstName.length}");
@@ -86,7 +83,7 @@ void main() {
   int a = 10;
   int b = 20;
 
-  print("Sum of $a and $b is ${a+b}");
+  print("Sum of $a and $b is ${a + b}");
 
 //String concatenation
 
@@ -113,5 +110,30 @@ void main() {
   var s9 = '\n' r'In a raw string, not even \n gets special treatment';
   print(s9);
 
+  //final keyword
+  final cityName = 'Mumbai';
+  print(cityName);
+
+  final String country = "India";
+  print(country);
+
+  //const keyword
+  const msPerSecond = 1000;
+  const secondsUntilRetry = 5;
+  const msUntilRetry = secondsUntilRetry * msPerSecond;
+  print(msUntilRetry);
+
+  var fullName = '';
+  if (fullName.isEmpty) {
+    print("Inside if statement");
+  }
+
+}
+
+class Person{
+  final name = "Sana Shaikh";
+
+  // const age = 25; //Error: Only static field can be declared as const
+  static const age = 25;
 
 }
