@@ -128,12 +128,48 @@ void main() {
     print("Inside if statement");
   }
 
+//  Conditional Expression
+//1. condition ? exp1 : exp2;
+//If condition is true, evaluate exp1 (and return its value)
+//otherwise, evaluates and returns the value of exp2
+
+  int num1 = 5;
+  int num2 = 10;
+  int greaterNum;
+
+  if (num1 > num2) {
+    greaterNum = num1;
+    // print("$num1 is greater");
+  } else {
+    greaterNum = num2;
+    // print("$num2 is greater");
+  }
+
+  print("$greaterNum is greater");
+
+//  Using conditional expression
+  num1 > num2 ? print("$num1 is greater") : print("$num2 is greater");
+
+  num1 > num2 ? greaterNum = num1 : greaterNum = num2;
+  print("$greaterNum is greater");
+
+//2. exp1 ?? exp2
+//If exp1 is non-null, returns its value;
+//otherwise, evaluates and returns the value of exp2
+
+  String empName = "Sana Shaikh";
+  String n = empName ?? "Unknown User";
+
+  print(n);
+
+  String? empId;
+  String id = empId ?? "500";
+  print(id);
 }
 
-class Person{
+class Person {
   final name = "Sana Shaikh";
 
   // const age = 25; //Error: Only static field can be declared as const
   static const age = 25;
-
 }
