@@ -1,3 +1,5 @@
+late String description;
+
 void main() {
   //NOTE: All data types in Dart are Objects.
 
@@ -165,6 +167,20 @@ void main() {
   String? empId;
   String id = empId ?? "500";
   print(id);
+
+//Late Variable
+
+  description = "Flutter Late Variable Tutorial";
+  print("Description: ${description}");
+
+  //if the temperature variable is never used, then the expensive readThermometer()
+  // function is never called:
+  late String temperature = readThermoMeter();
+  // print(temperature);
+}
+
+readThermoMeter() {
+  print("Hi");
 }
 
 class Person {
