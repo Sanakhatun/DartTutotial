@@ -177,6 +177,19 @@ void main() {
   // function is never called:
   late String temperature = readThermoMeter();
   // print(temperature);
+
+//List
+  var list = null; //["Car", "Boat", "Plane"];
+  print(list);
+
+  List<int> numbers = [1, 2, 3];
+  print(numbers);
+  print("First Element in the list: ${numbers[0]}");
+  print("Last element in the list: ${numbers.length - 1}");
+
+  var list2 = [100, ...?list]; //Spread operator
+  print(list2);
+
 }
 
 readThermoMeter() {
